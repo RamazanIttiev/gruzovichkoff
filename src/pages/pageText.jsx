@@ -5,7 +5,7 @@ const Title = styled('h1')({
   color: 'red',
 });
 
-const PageText = ({ count, children }) => {
+export const PageText = ({ count, children }) => {
   const [sum, setSum] = useState(count);
 
   useEffect(() => {
@@ -24,5 +24,3 @@ const PageText = ({ count, children }) => {
     </>
   );
 };
-
-export const App = () => <PageText count={0}>I'm text from a component</PageText>;
