@@ -5,10 +5,11 @@ const Title = styled('h1')({
   color: 'red',
 });
 
-export const PageText = ({ count, children }) => {
+export const PageText = ({ count, children, data }) => {
   const [sum, setSum] = useState(count);
 
   useEffect(() => {
+    console.log(data);
     setSum(sum + 1);
   }, []);
 
