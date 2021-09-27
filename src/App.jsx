@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, styled } from '@mui/material';
+
+const Title = styled('h1')({
+  color: 'red',
+});
 
 const PageText = ({ count, children }) => {
   const [sum, setSum] = useState(count);
@@ -10,7 +14,7 @@ const PageText = ({ count, children }) => {
 
   return (
     <>
-      <h1>Hello World!</h1>
+      <Title>Hello World!</Title>
       <Grid container>
         <Grid item xs={12}>
           {children}
